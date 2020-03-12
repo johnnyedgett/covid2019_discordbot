@@ -40,6 +40,7 @@ async def on_message(message):
 		return
 
 	if message.content.startswith('!stats'):
+		log("USER %s requested !stats" % message.author)
 		await message.channel.send('Hold on - I\'m checking.')
 		response = requests.get(API_URL)
 		if response.status_code != 200:
@@ -58,15 +59,21 @@ async def on_message(message):
 		await message.channel.send(to_send)
 
 	if message.content.startswith('!dashboard'):
+		log("USER %s requested !dashboard" % message.author)
 		await message.channel.send('A more comprehensive dashboard is located at %s' % DASHBOARD_LINK)
 
 	if message.content.startswith('!data'):
+		log("USER %s requested !data" % message.author)
 		await message.channel.send('The raw data can be found at %s' % DATA_LINK)
 
 	if message.content.startswith('!commands'):
+		log("USER %s requested !commands" % message.author)
 		await message.channel.send('The available commands are !stats, !dashboard, !data')
 		
 async def check_stats(message):
 	await message.channel.send('In the stats method')
 	
+def log(message):
+	print("[%s] %s" % (datetime.utcnow(), message))
+
 client.run(TOKEN)

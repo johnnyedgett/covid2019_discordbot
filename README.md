@@ -3,8 +3,8 @@ Just a bot to see the current stats of COVID 2019 (# cases, # recovered, # death
 
 # Commands
  + !stats - gives the stats
- + !data - view source data (alternatively, it's here: [nCov2019](https://github.com/GuangchuangYu/nCov2019) 
- + !dashboard - view dashboard created from source data (alternatively, it's here: [Coronavirus COVID-19](https://www.arcgis.com/apps/opsdashboard/index.html#/bda7594740fd40299423467b48e9ecf6)
+ + !data - view source data (alternatively, it's here: [nCov2019](https://github.com/GuangchuangYu/nCov2019) )
+ + !dashboard - view dashboard created from source data (alternatively, it's here: [Coronavirus COVID-19](https://www.arcgis.com/apps/opsdashboard/index.html#/bda7594740fd40299423467b48e9ecf6))
  + !commands - view available commands from above
 
 # Set up:
